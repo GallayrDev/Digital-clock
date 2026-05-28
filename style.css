@@ -1,0 +1,123 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: digital;
+    background: #f5f5f5;
+    width: 100%;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.box{
+    width: 600px;
+    height: 250px;
+      background: linear-gradient(
+          to right,
+        #2b2b2b 0%,
+        #3a372f 50%,
+        #1e1e1e 100%
+        
+    );
+    border: 3px solid #4d0adf;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.box::before{
+    content: '';
+    background: #9e4545;
+    width: calc(100% + 30px);
+    height: calc(100% + 30px);
+    z-index: -1;
+    border-radius: 15px;
+    position: absolute;
+}
+.clock{
+   color: #00ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    line-height: 1;
+}
+.time{
+    font-size: 220px;
+    font-weight: normal;
+    margin-right: 10px;
+    letter-spacing: 10px;
+    position: relative;
+}
+.ampm{
+    position: absolute;
+    top: 30px;
+    left: 10px;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: orbitron;
+    letter-spacing: 3px;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.temp,
+.week,
+.date{
+    text-align: center;
+}
+.value{
+    font-size: 40px;
+    text-align: center;
+    font-weight: normal;
+}
+.unit{
+    font-size: 20px;
+    text-align: center;
+}
+h5{
+    text-align: center;
+    font-size: 8px;
+    font-family: orbitron;
+    margin: 2px;
+    letter-spacing: 2px;
+}
+@font-face{
+    font-family: digital;
+    src: url('../fonts/digital-7.ttf');
+}
+@media screen and (max-width: 480px){
+   /* mobile */
+   .box{
+    width: 90%;
+    height: auto;
+    padding: 20px;
+   }
+   .time{
+    font-size: 100px;
+    letter-spacing: 5px;
+   }
+   .clock{
+    flex-direction: column;
+   }
+   .info{
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+   }
+   .ampm{
+    position: static;
+    margin-top: -20px;
+    margin-bottom: 20px;
+   }
+}
+
+
